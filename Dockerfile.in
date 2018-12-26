@@ -23,4 +23,5 @@ RUN test -h /etc/localtime && rm -f /etc/localtime && cp /usr/share/zoneinfo/UTC
 
 ADD ./bin/node-problem-detector /node-problem-detector
 ADD config /config
-ENTRYPOINT ["/node-problem-detector", "--system-log-monitors=/config/kernel-monitor.json"]
+#ENTRYPOINT ["/node-problem-detector", "--system-log-monitors=/config/kernel-monitor.json"]
+CMD ["/node-problem-detector"]
